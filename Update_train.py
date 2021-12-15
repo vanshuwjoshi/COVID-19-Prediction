@@ -16,7 +16,6 @@ print(len(label_0))
 # copy the images with label 0 to another folder
 for i,row in label_0.iterrows():
     name = row.File
-    print(i)
     org = r"C:\Users\vansh\OneDrive\Desktop\Data Challenge 2\stat441fall2021dc2\train\train\train"
     new = r"C:\Users\vansh\OneDrive\Desktop\Data Challenge 2\updated_train\0"
     for file in glob.iglob(os.path.join(org, name)):
@@ -24,7 +23,6 @@ for i,row in label_0.iterrows():
 
 # copy the images with label 1 to another folder
 for i,row in label_1.iterrows():
-    print(i)
     name = row.File
     org = r"C:\Users\vansh\OneDrive\Desktop\Data Challenge 2\stat441fall2021dc2\train\train\train"
     new = r"C:\Users\vansh\OneDrive\Desktop\Data Challenge 2\updated_train\1"
