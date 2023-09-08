@@ -1,10 +1,27 @@
-# Data-Challenge-2
-In-Class kaggle competition 
+# COVID-19 Detection from Chest X-ray Images
 
-In this data challenge we were given a supervised dataset of chest X-ray images, and were asked to train a model to detect the COVID-19 cases using neural network that gets the images from the input and predicts the labels of the images in the output. The dataset consisted 15264 (512x512) chest X-ray images for the train set and 400 images for the test set. The dataset contains positive and negative classes to indicate the positive and negative COVID-19 cases.
+## Overview
 
-In the file update_train.py I seperated the images into different folders for the two different classes in my local enviornment. 
+This repository contains the code and documentation for an in-class Kaggle competition focused on the detection of COVID-19 cases from chest X-ray images. In this challenge, participants were tasked with training machine learning models to accurately classify chest X-ray images as either positive or negative for COVID-19 using a supervised dataset. The goal was to develop an effective neural network model for image classification.
 
-Then I rescaled the images to the size of 32x32 and then created a Neural net with 3 convolutional blocks using tf.keras.layers.Conv2D and max pooling layer with each one of them.
+## Dataset
 
-Another model was trained using SVM, in which the fully-connected layer with 128 units is created with activation by a linear activation function. In the end the model was compiled with hinge loss function. This model score 0.85 on kaggle private leaderboard. 
+- **Training Data**: The training dataset consisted of 15,264 chest X-ray images (512x512) containing both positive and negative COVID-19 cases.
+- **Test Data**: The test dataset included 400 chest X-ray images for model evaluation.
+- **Labels**: The dataset provided labels for each image, indicating whether it was a positive or negative COVID-19 case.
+
+## Code Overview
+
+### Data Preprocessing and Organization
+
+- `update_train.py`: This Python script was used to preprocess the training data. It organized the images into separate folders for positive and negative classes in the local environment.
+
+### Model Development
+
+- `covid_detection_model.py`: This Python script contains the code for building a neural network model using TensorFlow and Keras. The model architecture includes 3 convolutional blocks with max-pooling layers, followed by a fully connected layer with 128 units and a linear activation function. The model was compiled using the hinge loss function.
+
+- `svm_model.py`: In addition to the neural network model, an SVM model was also developed for comparison. This model achieved a Kaggle private leaderboard score of 0.85.
+
+## Evaluation
+
+The evaluation of model performance was based on the Kaggle private leaderboard score, which reflects the model's ability to accurately classify COVID-19 cases in the test dataset.
